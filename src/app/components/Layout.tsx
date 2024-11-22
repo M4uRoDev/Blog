@@ -12,7 +12,7 @@ export default function RootLayout({
         <div className="flex flex-col min-h-screen">
           <header className="header">
             <Link href="/">
-              <h1>M4uRoDev's Blog</h1>
+              <h1>M4uRoDev&apos;s Blog</h1>
             </Link>
           </header>
           <main className="flex-1 content">
