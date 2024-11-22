@@ -1,21 +1,131 @@
+/* globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* General */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0d1117; /* Fondo dark mode azulado */
+  color: #c9d1d9; /* Texto claro */
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  color: #58a6ff; /* Color de enlaces */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.header {
+  padding: 1rem;
+  background-color: #161b22; /* Fondo de header */
+  text-align: center;
+  font-size: 3rem;
+  width: 100%; /* Ocupa todo el ancho */
+}
+
+.content {
+  flex: 1; /* Hace que el contenido ocupe el espacio restante */
+  padding: 1.5rem;
+  width: 100%; /* Asegura que el contenido ocupe el 100% del ancho disponible */
+  box-sizing: border-box; /* Incluye el padding en el tamaño total del elemento */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente */
+}
+
+.footer {
+  padding: 1rem;
+  text-align: center;
+  background-color: #161b22; /* Fondo de footer */
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 1rem 0;
+}
+
+ul li img {
+  transition: transform 0.3s ease;
+}
+
+ul li img:hover {
+  transform: scale(1.05);
+}
+
+article {
+  flex: 1; /* Hace que el contenido ocupe el espacio restante */
+  padding: 1.5rem;
+  width: 100%; /* Asegura que el contenido ocupe el 100% del ancho disponible */
+  box-sizing: border-box; /* Incluye el padding en el tamaño total del elemento */
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente */
+}
+
+article img {
+  max-width: 100%; /* Asegura que las imágenes no desborden el contenedor */
+  /* height: auto; */
+  margin: 1rem 0;
+  display: block;
+}
+
+article h1, article h2, article h3, article h4, article h5, article h6 {
+  color: #c9d1d9; /* Texto claro */
+}
+
+article h1 {
+  font-size: 2rem;
+  color: #58a6ff; /* Color de encabezado */
+}
+
+article h2 {
+  font-size: 1.5rem;
+  color: #58a6ff; /* Color de encabezado */
+}
+
+article h3 {
+  font-size: 1.25rem;
+  color: #58a6ff; /* Color de encabezado */
+}
+
+article h4 {
+  font-size: 1rem;
+  color: #58a6ff; /* Color de encabezado */
+}
+
+article h5 {
+  font-size: 0.875rem;
+  color: #58a6ff; /* Color de encabezado */
+}
+
+article h6 {
+  font-size: 0.75rem;
+  color: #58a6ff; /* Color de encabezado */
+}
+
+article p {
+  margin: 1rem 0;
+}
+
+article ul {
+  padding-left: 1.5rem;
+}
+
+article li {
+  list-style-type: disc;
 }
