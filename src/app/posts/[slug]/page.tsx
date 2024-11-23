@@ -1,5 +1,11 @@
 import { getSortedPostsData } from '../../lib/posts';
 
+interface PageProps {
+  params: Promise<{
+    slug: string;
+  }>;
+}
+
 export async function generateStaticParams() {
   const allPostsData = await getSortedPostsData();
   return allPostsData.map((post) => ({
@@ -7,7 +13,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function Post({ params }: { params: { slug: string } }) {
+export default async function Post({ params }: PageProps){
   const { slug } = await params;
 
   const allPostsData = await getSortedPostsData();
