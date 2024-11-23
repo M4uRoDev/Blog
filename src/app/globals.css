@@ -3,29 +3,53 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Variables globales para light-mode */
+:root {
+  --bg-color: #ffffff; /* Fondo claro */
+  --text-color: #24292e; /* Texto oscuro */
+  --header-bg-color: #f6f8fa; /* Fondo del header */
+  --footer-bg-color: #f6f8fa; /* Fondo del footer */
+  --link-color: #0366d6; /* Color de enlaces */
+  --link-hover-color: #0056b3; /* Hover de enlaces */
+  --article-header-color: #0366d6; /* Color de encabezados en artículos */
+}
+
+/* Variables globales para dark-mode */
+html.dark {
+  --bg-color: #0d1117; /* Fondo oscuro */
+  --text-color: #c9d1d9; /* Texto claro */
+  --header-bg-color: #161b22; /* Fondo del header */
+  --footer-bg-color: #161b22; /* Fondo del footer */
+  --link-color: #58a6ff; /* Color de enlaces */
+  --link-hover-color: #1f6feb; /* Hover de enlaces */
+  --article-header-color: #58a6ff; /* Color de encabezados en artículos */
+}
+
 /* General */
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #0d1117; /* Fondo dark mode azulado */
-  color: #c9d1d9; /* Texto claro */
+  background-color: var(--bg-color); /* Fondo dinámico */
+  color: var(--text-color); /* Texto dinámico */
   line-height: 1.6;
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
 }
 
 a {
-  color: #58a6ff; /* Color de enlaces */
+  color: var(--link-color); /* Color de enlaces dinámico */
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
+  color: var(--link-hover-color); /* Hover dinámico */
 }
 
 .header {
   padding: 1rem;
-  background-color: #161b22; /* Fondo de header */
+  background-color: var(--header-bg-color); /* Fondo dinámico */
   text-align: center;
   font-size: 3rem;
   width: 100%; /* Ocupa todo el ancho */
@@ -44,7 +68,7 @@ a:hover {
 .footer {
   padding: 1rem;
   text-align: center;
-  background-color: #161b22; /* Fondo de footer */
+  background-color: var(--footer-bg-color); /* Fondo dinámico */
   position: relative;
   bottom: 0;
   width: 100%;
@@ -72,50 +96,18 @@ article {
   padding: 1.5rem;
   width: 100%; /* Asegura que el contenido ocupe el 100% del ancho disponible */
   box-sizing: border-box; /* Incluye el padding en el tamaño total del elemento */
-  /* display: flex; */
   flex-direction: column;
   align-items: center; /* Centra horizontalmente */
 }
 
 article img {
   max-width: 100%; /* Asegura que las imágenes no desborden el contenedor */
-  /* height: auto; */
   margin: 1rem 0;
   display: block;
 }
 
 article h1, article h2, article h3, article h4, article h5, article h6 {
-  color: #c9d1d9; /* Texto claro */
-}
-
-article h1 {
-  font-size: 2rem;
-  color: #58a6ff; /* Color de encabezado */
-}
-
-article h2 {
-  font-size: 1.5rem;
-  color: #58a6ff; /* Color de encabezado */
-}
-
-article h3 {
-  font-size: 1.25rem;
-  color: #58a6ff; /* Color de encabezado */
-}
-
-article h4 {
-  font-size: 1rem;
-  color: #58a6ff; /* Color de encabezado */
-}
-
-article h5 {
-  font-size: 0.875rem;
-  color: #58a6ff; /* Color de encabezado */
-}
-
-article h6 {
-  font-size: 0.75rem;
-  color: #58a6ff; /* Color de encabezado */
+  color: var(--article-header-color); /* Encabezados dinámicos */
 }
 
 article p {

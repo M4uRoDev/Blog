@@ -25,7 +25,7 @@ export default async function Post({ params }: PageProps){
 
   return (
     <div className="flex flex-col items-center justify-center py-4">
-      <article className="bg-gray-800 rounded-lg shadow-md p-6 max-w-3xl w-full">
+      <article className="dark:bg-gray-800 rounded-lg shadow-md p-6 max-w-3xl w-full">
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-4xl font-bold text-blue-400">{post.title}</h1>
           <p className="text-gray-400 italic">{post.date}</p>

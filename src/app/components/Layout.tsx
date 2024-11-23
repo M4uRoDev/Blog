@@ -1,6 +1,8 @@
 import Link from "next/link";
 import "../globals.css";
 
+import { ThemeToggle } from "./ThemeToggle";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -14,6 +16,7 @@ export default function RootLayout({
             <Link href="/">
               <h1>M4uRoDev&apos;s Blog</h1>
             </Link>
+            <ThemeToggle />
           </header>
           <main className="flex-1 content">
             {children}
