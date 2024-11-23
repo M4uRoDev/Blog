@@ -12,6 +12,6 @@ Sin embargo, aún continua mi ambición de aprender día a día de desarrollo y 
 
 Así que básicamente con este blog, aquellas personas que me lean espero que pueda entregarles conocimientos, ideas o metodologías para que puedan trabajar en sus áreas, reitero, me gusta aprender de todo, puede que en este blog se vean desarrollos de software y hasta recetas de cocina, por lo que a futuro deberé añadir funcionalidades adicionales a este proyecto pequeño para ayudar a clasificar y ordenar los diferentes artículos. 
 
-**Advertencia de __mala praxis__**
+**Advertencia de _mala praxis_**
 
 Aprovechando la publicación de este artículo integraré una nueva funcionalidad, el dark/light mode, espero que funcione :D. Saludos!
