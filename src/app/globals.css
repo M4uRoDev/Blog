@@ -87,24 +87,6 @@ a:hover {
   bottom: 0;
   width: 100%;
 }
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  margin: 1rem 0;
-}
-
-ul li img {
-  transition: transform 0.3s ease;
-}
-
-ul li img:hover {
-  transform: scale(1.05);
-}
-
 article {
   flex: 1; /* Hace que el contenido ocupe el espacio restante */
   padding: 1.5rem;
@@ -112,11 +94,12 @@ article {
   box-sizing: border-box; /* Incluye el padding en el tamaño total del elemento */
   flex-direction: column;
   align-items: center; /* Centra horizontalmente */
+  display: block;
+  overflow: hidden; /* Previene que el contenido sobresalga */
 }
 
 article img {
   max-width: 100%; /* Asegura que las imágenes no desborden el contenedor */
-  margin: 1rem 0;
   display: block;
 }
 
@@ -159,4 +142,25 @@ article ul {
 
 article li {
   list-style-type: disc;
+}
+
+/* Asegura que los bloques de código respeten el ancho del contenedor */
+pre {
+  background-color: var(--bg-color); /* Fondo oscuro */
+  color: #e2e8f0; /* Texto claro */
+  padding: 1rem; /* Espaciado interno */
+  border-radius: 0.5rem; /* Bordes redondeados */
+  overflow-x: auto; /* Permite desplazamiento horizontal */
+  max-width: 100%; /* Limita el ancho al contenedor */
+  box-sizing: border-box; /* Incluye padding en el ancho total */
+  white-space: pre-wrap; /* Permite saltos de línea si es necesario */
+  word-break: break-word; /* Rompe palabras largas */
+}
+
+code {
+  font-family: 'GeistMonoVF', monospace; /* Fuente monoespaciada */
+  font-size: 0.9rem; /* Tamaño del texto */
+  color: #93c5fd; /* Azul claro */
+  padding: 0.1rem 0.2em; /* Espaciado interno */
+  border-radius: 0.25rem; /* Bordes redondeados */
 }

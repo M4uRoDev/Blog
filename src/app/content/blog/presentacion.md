@@ -1,6 +1,6 @@
 --- 
 title: Presentación
-date: "2024-11-22 17:36"
+date: "2024-11-22"
 image: "/images/presentacion.jpg"
 --- 
 

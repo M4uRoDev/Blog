@@ -1,6 +1,7 @@
 ---
 title: El blog
-date: "2024-11-23 02:30"
+date: "2024-11-23"
+image: "/images/blog-min.png"
 ---
 
 ### ¿Por qué el blog? 

@@ -1,6 +1,6 @@
 ---
 title: Creando un blog I
-date: "2024-11-23 13:47"
+date: "2024-11-23"
 image: ""
 ---
 
