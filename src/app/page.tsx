@@ -35,7 +35,7 @@ export default async function Home() {
             </div>
             {/* Contenido del card */}
             <Link href={`/posts/${slug}`}>
-              <div className="absolute inset-0 z-10 flex flex-col justify-end p-4 bg-gradient-to-t from-gray-800 dark:from-sky-800 hover:from-sky-800/20 border-sky-950 text-white">
+              <div className="absolute inset-0 z-10 flex flex-col justify-end p-4 bg-gradient-to-t from-gray-800 dark:from-sky-800 dark:hover:from-sky-800/20 hover:from-gray-800/20  border-sky-950 text-white">
                 <h3 className="text-lg font-semibold mb-2">{title}</h3>
                 <p className="text-sm">{date}</p>
               </div>

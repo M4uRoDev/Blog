@@ -8,11 +8,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const commitHash = process.env.VERCEL_GIT_COMMIT_SHA ? process.env.VERCEL_GIT_COMMIT_SHA : "dev";
+  const repoUrl = process.env.VERCEL_GIT_REPO_SLUG ? "https://github.com/M4uRoDev/Blog/" : "#";
+
   return (
     <html lang="en">
       <body className="min-h-screen flex flex-col">
         <div className="flex flex-col min-h-screen">
-          <header className="header flex justify-between items-center px-4 py-4">
+          <header className="fixed header flex justify-between items-center px-4 py-4">
             {/* Título centrado a la izquierda */}
             <Link href="/">
               <h1 className="text-2xl font-bold">M4uRoDev&apos;s Blog</h1>
@@ -22,7 +26,7 @@ export default function RootLayout({
               <ThemeToggle />
             </div>
           </header>
-          <main className="flex-1 content">{children}</main>
+          <main className="flex-1 mt-10 content">{children}</main>
           <footer className="relative footer flex justify-center items-center">
             <p className="text-center">&copy; 2024 Mi Blog</p>
             <a
@@ -44,6 +48,15 @@ export default function RootLayout({
                   clipRule="evenodd"
                 />
               </svg>
+            </a>
+            {/* Marca de agua con enlace */}
+            <a
+              href={`${repoUrl}/commit/${commitHash}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute bottom-2 left-2 text-xs text-gray-400 dark:text-gray-600 hover:underline"
+            >
+              Commit: {commitHash.slice(0, 7)} {/* Solo primeros 7 caracteres */}
             </a>
           </footer>
         </div>

@@ -20,6 +20,7 @@
 /* Variables globales para light-mode */
 :root {
   --bg-color: #ffffff; /* Fondo claro */
+  --bg-code-color: #f6f8fa; /* Fondo gris */
   --text-color: #24292e; /* Texto oscuro */
   --header-bg-color: #f6f8fa; /* Fondo del header */
   --footer-bg-color: #f6f8fa; /* Fondo del footer */
@@ -31,6 +32,7 @@
 /* Variables globales para dark-mode */
 html.dark {
   --bg-color: #0d1117; /* Fondo oscuro */
+  --bg-code-color: #0d1117; /* Fondo oscuro */
   --text-color: #c9d1d9; /* Texto claro */
   --header-bg-color: #161b22; /* Fondo del header */
   --footer-bg-color: #161b22; /* Fondo del footer */
@@ -146,8 +148,8 @@ article li {
 
 /* Asegura que los bloques de código respeten el ancho del contenedor */
 pre {
-  background-color: var(--bg-color); /* Fondo oscuro */
-  color: #e2e8f0; /* Texto claro */
+  background-color: var(--bg-code-color); /* Fondo oscuro */
+  color: var(--text-color); /* Texto claro */
   padding: 1rem; /* Espaciado interno */
   border-radius: 0.5rem; /* Bordes redondeados */
   overflow-x: auto; /* Permite desplazamiento horizontal */
@@ -155,12 +157,13 @@ pre {
   box-sizing: border-box; /* Incluye padding en el ancho total */
   white-space: pre-wrap; /* Permite saltos de línea si es necesario */
   word-break: break-word; /* Rompe palabras largas */
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra interna */
 }
 
 code {
   font-family: 'GeistMonoVF', monospace; /* Fuente monoespaciada */
   font-size: 0.9rem; /* Tamaño del texto */
-  color: #93c5fd; /* Azul claro */
+  color: var(--text-color); /* Azul claro */
   padding: 0.1rem 0.2em; /* Espaciado interno */
   border-radius: 0.25rem; /* Bordes redondeados */
 }
