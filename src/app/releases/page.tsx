@@ -16,31 +16,24 @@ export default function ReleasesPage() {
   const [commits, setCommits] = useState<Commit[]>([]);
   const [error, setError] = useState<string | null>(null);
 
-  const github_token = process.env.GITHUB_TOKEN;
-
   useEffect(() => {
     async function fetchCommits() {
       try {
-        const res = await fetch("https://api.github.com/repos/M4uRoDev/Blog/commits", {
-          headers: {
-            Authorization: "Bearer " + github_token,
-            Accept: "application/vnd.github+json",
-            "X-Github-Api-Version": "2022-11-28",
-          },
-        });
-
+        const res = await fetch("/api/commits");
         if (!res.ok) {
-          throw new Error(`Error al obtener commits: ${res.status} ${res.statusText}`);
+          throw new Error(`Error: ${res.status} ${res.statusText}`);
         }
-
-        const data: Commit[] = await res.json();
+        const data = await res.json();
         setCommits(data);
       } catch (err) {
-        setError(err instanceof Error ? err.message : "Error desconocido");
-        console.error(err);
+        if (err instanceof Error) {
+          setError(err.message);
+        } else {
+          setError("An unknown error occurred");
+        }
       }
     }
-
+  
     fetchCommits();
   }, []);
 
