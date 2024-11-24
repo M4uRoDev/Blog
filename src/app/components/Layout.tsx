@@ -26,7 +26,7 @@ export default function RootLayout({
           <footer className="relative footer flex justify-center items-center">
             <p className="text-center">&copy; 2024 Mi Blog</p>
             <a
-              href="https://github.com/tu-usuario/tu-repositorio"
+              href="https://github.com/M4uRoDev/Blog"
               target="_blank"
               rel="noopener noreferrer"
               className="absolute bottom-4 right-4 text-gray-400 hover:text-gray-800 dark:hover:text-white transition-colors duration-300"
