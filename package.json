@@ -14,8 +14,10 @@
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",
     "remark": "^15.0.1",
+    "remark-directive": "^3.0.0",
     "remark-gfm": "^4.0.0",
-    "remark-html": "^16.0.1"
+    "remark-html": "^16.0.1",
+    "unist": "^0.0.1"
   },
   "devDependencies": {
     "@types/node": "^20",

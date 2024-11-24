@@ -3,6 +3,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'GeistMonoVF';
+  src: url('fonts/GeistMonoVF.woff') format('woff');
+  font-weight: 400; /* Peso normal */
+  font-style: normal; /* Estilo normal */
+}
+
+@font-face {
+  font-family: 'GeistVF';
+  src: url('fonts/GeistVF.woff') format('woff');
+  font-style: normal; /* Estilo normal */
+}
+
+
 /* Variables globales para light-mode */
 :root {
   --bg-color: #ffffff; /* Fondo claro */
@@ -29,7 +43,7 @@ html.dark {
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'GeistVF', sans-serif;
   background-color: var(--bg-color); /* Fondo dinámico */
   color: var(--text-color); /* Texto dinámico */
   line-height: 1.6;
@@ -108,6 +122,31 @@ article img {
 
 article h1, article h2, article h3, article h4, article h5, article h6 {
   color: var(--article-header-color); /* Encabezados dinámicos */
+  font-family: 'GeistVF', serif;
+}
+
+article h1 {
+  font-size: 2.5rem;
+}
+
+article h2 {
+  font-size: 2rem;
+}
+
+article h3 {
+  font-size: 1.5rem;
+}
+
+article h4 {
+  font-size: 1.25rem;
+}
+
+article h5 {
+  font-size: 1rem;
+}
+
+article h6 {
+  font-size: 0.875rem;
 }
 
 article p {

@@ -11,7 +11,7 @@ export default async function Home() {
         {allPostsData.map(({ slug, title, date, image }) => (
           <li
             key={slug}
-            className="relative rounded-lg shadow-md overflow-hidden group h-44 w-60 flex items-end"
+            className="relative rounded-lg shadow-md overflow-hidden group h-40 w-80 flex items-end"
             style={{
               backgroundImage: image
                 ? `url(${image})`
