@@ -10,6 +10,7 @@ interface Commit {
     };
   };
   html_url: string;
+  sha: string;
 }
 
 export default function ReleasesPage() {
@@ -70,7 +71,7 @@ export default function ReleasesPage() {
 
   return (
     <div className="w-2/3 p-6">
-      <h1 className="text-3xl font-bold mb-6 text-center text-blue-600">Lista de Releases</h1>
+      <h1 className="text-3xl font-bold mb-6 text-center">Lista de Releases</h1>
       <p className="text-gray-600 dark:text-gray-300 mb-6">
         Aquí podemos ver la lista de commits realizados en el repositorio del blog, para fines prácticos dejaremos los commits, luego de que el proyecto crezca se podrán mostrar como releases de versiones, especificando su versión. Por ahora los distintos commits serán el release.
       </p>
@@ -81,9 +82,16 @@ export default function ReleasesPage() {
             className="border border-gray-300 dark:border-gray-700 rounded-lg p-4 bg-gray-100 dark:bg-gray-800 shadow-sm"
           >
             <div className="flex justify-between items-center">
-              <h2 className="text-lg font-semibold text-blue-500">
-                Commit #{commits.length - index}
-              </h2>
+              <a
+                href={commit.html_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 hover:underline"
+              >
+                <h2 className="text-lg font-semibold text-blue-500">
+                  Commit {(commit.sha).slice(0, 7)}
+                </h2>
+              </a>
               <p className="text-sm text-gray-500 dark:text-gray-400">
                 {formatDate(commit.commit.author.date)}
               </p>
@@ -91,14 +99,6 @@ export default function ReleasesPage() {
             <div className="text-gray-700 dark:text-gray-300 mt-2">
               {formatMessage(commit.commit.message)}
             </div>
-            <a
-              href={commit.html_url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block mt-4 text-sm text-blue-400 hover:underline"
-            >
-              Ver commit completo
-            </a>
           </li>
         ))}
       </ul>
